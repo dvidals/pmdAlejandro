@@ -1,4 +1,4 @@
-package com.example.a1_ciclodevida;
+package com.example.ciclodevida;
 
 import android.content.Context;
 

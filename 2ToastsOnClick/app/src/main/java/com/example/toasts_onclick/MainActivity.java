@@ -2,6 +2,7 @@ package com.example.toasts_onclick;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,16 +38,13 @@ public class MainActivity extends AppCompatActivity {
         Button button2 = findViewById(R.id.button2);
         // El escuchador se instancia (new) a partir de una clase anónima
         button2.setOnClickListener(
-                new View.OnClickListener() {  // Puede sustituirse por una expresión lambda
-                    @Override
-                    public void onClick(View v) {
+                new View.OnClickListener() {  // El escuchador se instancia (new) a partir de una clase anónima
+                    @Override  // Se sobreescribe el método onclick del escuchador
+                    public void onClick(View v) { // el método recibe como parámetro la View sobre la que se hizo el click (el botón)
                         Toast.makeText(MainActivity.this, R.string.o3_clase_anonima, Toast.LENGTH_SHORT).show();
                     }
                 });
 
     }
-
-
-
 
 }

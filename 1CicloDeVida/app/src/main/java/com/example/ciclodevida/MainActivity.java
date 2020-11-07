@@ -2,7 +2,7 @@
  * https://developer.android.com/guide/components/activities/activity-lifecycle?hl=es
  */
 
-package com.example.a1_ciclodevida;
+package com.example.ciclodevida;
 
 import androidx.appcompat.app.AppCompatActivity;
 
