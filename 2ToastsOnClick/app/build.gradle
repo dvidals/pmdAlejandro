@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "com.example.a3_toastsonclick"
+        applicationId "com.example.toasts_onclick"
         minSdkVersion 30
         targetSdkVersion 30
         versionCode 1
