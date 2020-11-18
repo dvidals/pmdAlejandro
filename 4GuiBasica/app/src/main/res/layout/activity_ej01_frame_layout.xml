@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- FrameLayout es el layout más sencillo. Normalmente se utilizará solo como bloque en el que
+    no se coloca nada y sobre el que hacer modificaciones programáticamente
+        - xmlns:android: declaración del namespace (espacio de nombres) de Android
+
+        - layout_width: anchura
+            "match_parent" significa que el elemento se extiende hasta ocupar completamente el espacio
+            del elemento padre (en este caso, al no haber un elemento padre, éste sería la pantalla
+        - layout_height: altura
+ -->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" /> <!-- texto referenciado a res/values/strings.xml -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/frame" />
+
+    <!-- Los TextView se superpondrán ya que FrameLayout no permite indicar su posición -->
+
+</FrameLayout>

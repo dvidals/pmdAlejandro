@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- https://developer.android.com/training/constraint-layout -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ej09BasicosActivity">
+
+
+    <!-- https://developer.android.com/guide/topics/ui/look-and-feel -->
+
+
+    <!-- TextView
+Atributos para editar el texto de un TextView:
+•	android:background: color de fondo.
+•	android:textColor: color del texto.
+•	android:textSize: tamaño de la fuente.
+•	android:typeface: estilo del texto (serif, sans-serif, monospace).
+•	android:textStyle: estilo del texto (negrita, cursiva).
+
+Unidades de medida:
+•	Sp: pixel independiente de la escala. Similar a dp, se recomienda para indicar tamaños de fuentes
+porque su tamaño final depende de las opciones de visualización y accesibilidad en el móvil.
+Recordamos que dp es la unidad recomendada para dimensionar las vistas.
+    -->
+
+    <!-- El TextView está restringido a los 4 lados del layout ("parent" ya que es su elemento padre)
+    pero desplazado horizonalmente a la izquierda (layout_constraintHorizontal_bias) y verticalmente
+    hacia arriba (layout_constraintVertical_bias) -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="48dp"
+        android:background="@color/colorAccent"
+        android:text="Hello World!"
+        android:textColor="@color/colorBlanco"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/colorPrimary"
+        android:text="Bye World!"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    <!-- Este TextView tiene su parte izquierda alineada con la parte derecha del anterior
+    (layout_constraintStart_toEndOf) y su parte superior alineada con la inferior del otro
+    (layout_constraintTop_toBottomOf) -->
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Aquí escribiremos números"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <!--
+    android:inputType: indica el tipo de texto a introducir (números, texto, contraseña, teléfono…).
+    Por defecto, se admite cualquier combinación de caracteres. El valor que establezcamos para esta
+    propiedad tendrá además efecto en el tipo de teclado que mostrará Android para editar dicho campo.
+    P.ej., si hemos indicado "text" mostrará el teclado completo alfanumérico, si hemos indicado
+    "phone" mostrará el teclado numérico del teléfono, etc -->
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Aquí escribiremos mayúsculas"
+        android:inputType="textCapCharacters"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+
+    <!--
+    https://developer.android.com/guide/topics/ui/controls/button
+    https://material.io/develop/android/components/buttons
+    https://developer.android.com/reference/android/widget/Button
+    -->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botón"
+        android:onClick="muestraNuevoElemento"
+        app:layout_constraintEnd_toEndOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_stat_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Off"
+        android:textOn="On"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_stat_name"
+        android:text="Botón"
+        android:onClick="muestraNuevoElemento"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="151dp"
+        android:layout_height="179dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button09"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:srcCompat="@drawable/pngtreenew_coronavirus_fights_epidemic_of_5330219" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Windows"
+        app:layout_constraintStart_toStartOf="@+id/button09"
+        app:layout_constraintTop_toBottomOf="@+id/button09" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linux"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/button09" />
+
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        <!-- RadioGroup hereda de LinearLayout, así que tiene sus atributos, como orientación -->
+
+        <RadioButton
+            android:id="@+id/rbSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Si"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2">
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

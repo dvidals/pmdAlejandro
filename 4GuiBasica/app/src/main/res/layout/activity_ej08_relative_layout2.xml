@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding">
+    <!-- Utilizamos un padding definido como recurso en dimens.xml -->
+
+
+    <!-- Centramos respecto al contenedor "padre" -->
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="HOLA" />
+
+
+    <!-- alineado con la parte inferior de la etiqueta anterior
+        y a la dcha respecto al contenedor padre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/texto1"
+        android:layout_alignParentRight="true"
+        android:text="ADIOS" />
+
+
+</RelativeLayout>

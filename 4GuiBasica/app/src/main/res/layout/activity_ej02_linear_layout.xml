@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- LinearLayout con:
+        - padding: "relleno"; es un "margen hacia adentro" del elemento con respecto a las views
+            que se colocan dentro
+        - orientation: cómo apila los componentes: en este caso, verticalmente (por defecto sería horizontal)
+
+     https://developer.android.com/reference/android/widget/LinearLayout
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:padding="@dimen/paddind_default"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Botón con altura y anchura "wrap_content", esto es: el tamaño del botón es el justo para
+    envolver su contenido. Si el texto interior cambia, el botón cambiará de tamaño -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOTON 1" />
+
+    <!-- Botón con tamaño en pixeles. Si lo probamos en pantallas de distinta densidad,
+    cambiará mucho de tamaño -->
+    <Button
+        android:layout_width="120px"
+        android:layout_height="60px"
+        android:text="BOTON 2" />
+
+    <!-- Botón con tamaño en dp. Si lo probamos en pantallas de distinta densidad,
+    se mantendrá más o menos de un tamaño similar -->
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="BOTON 3" />
+
+    <!-- dp = dpi = density-independent pixel; 1 dp equivale a un pixel en una pantalla de densidad
+    media (mdpi). Es la unidad recomendada para indicar el tamaño de elementos gráficos. En general,
+    indicaremos el tamaño siempre con esta unidad -->
+
+
+
+</LinearLayout>

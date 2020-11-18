@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- https://developer.android.com/guide/topics/ui/layout/relative -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOLA"/>
+
+    <!-- "@+id/cadena_de_texto":
+        @: indica que lo que va a continuación es un recurso.
+        +: indica que el ID no existe y que hay que crearlo.
+        id: tipo de recurso (podría ser string, drawable, layout, etc.).
+            Será lo que se refiera dentro de la clase autogenerada R, p.ej.: findViewById(R.id.texto1);
+        cadena_de_texto: es el nombre que se le da al identificador. -->
+
+    <TextView
+        android:id="@+id/texto2"
+        android:layout_below="@id/texto1"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADIOS" />
+    <!-- Se situará debajo (layout_below) de la primera, referenciando su id ("@id/texto1")
+        y alineada a derecha dentro de su elemento padre, el layout (layout_alignParentRight="true") -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/texto2"
+        android:text="HASTA LUEGO" />
+    <!-- Se ha indicado la posición en horizontal (a la izquierda del texto2), pero no en vertical,
+        podría ponerse debajo con: android:layout_below="@id/texto2" -->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/texto2"
+        android:layout_centerVertical="true"
+        android:text="HASTA LUEGO2" />
+
+
+    <!--
+
+Propiedades al posicionar una vista respecto a otra:
+•	android:layout_above: sitúa la parte inferior encima del id especificado.
+•	android:layout_below: sitúa la parte superior debajo del id especificado.
+•	android:layout_toLeftOf: sitúa a la izquierda.
+•	android:layout_toRightOf: sitúa a la derecha.
+•	android:layout_alignLeft: alinea el borde izqdo. con el del id especificado.
+•	android:layout_alignRight: alinea el borde dcho. con el del id especificado.
+•	android:layout_alignTop: alinea el borde superior con el del id especificado
+•	 android:layout_alignBottom: alinea el borde inferior con el del id especificado.
+
+Propiedades al posicionar una vista respecto a su contenedor (el cual es un RelativeLayout):
+•	android:layout_alignParentLeft: si true, alinea con el borde izqdo. del padre.
+•	android:layout_alignParentRight: si true, alinea con el borde dcho. del padre.
+•	android:layout_alignParentTop: si true, alinea con el borde sup. del padre.
+•	android:layout_alignParentBottom: si true, alinea con el borde inf. del padre.
+•	android:layout_centerHorizontal: si true, centra en horiz. respecto al padre.
+•	android:layout_centerVertical: si true, centra en vertical respecto al padre.
+•	android:layout_centerInParent: si true, centra en ambos sentidos.
+
+    -->
+
+</RelativeLayout>

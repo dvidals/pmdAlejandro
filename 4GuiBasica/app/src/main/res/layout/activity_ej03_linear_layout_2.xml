@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- https://developer.android.com/guide/topics/ui/layout/linear -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:orientation="vertical" >
+    <!-- padding específicos distintos para izquierda (start) y derecha (end) -->
+
+
+    <!-- EditText es una caja de texto editable. Hereda de TextView -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/to" />
+        <!-- "hint": "pista", texto que sale solo hasta que se escribe en la caja de texto -->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/subject" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="@string/message" />
+        <!-- Al declarar layout_weight="1" en solo este elemento, se expandirá ocupando el espacio
+        posible. Para ello, su layout_height debe ser "0dp".
+        "gravity" indica la posición del contenido del elemento. En este caso el texto, que queremos
+        que se escriba desde arriba. -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/send" />
+        <!-- Así como "gravity" indica dónde se van a posicionar los elementos internos, se puede
+        usar "layout_gravity" dentro de cada elemento para indicar una gravity individualizada. En
+        este caso el botón estará pegado a la derecha (android:layout_gravity="end") -->
+
+</LinearLayout>

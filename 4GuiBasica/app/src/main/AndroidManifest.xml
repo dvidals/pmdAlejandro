@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ui_basica">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.2GuiBasica">
+        <activity android:name=".Ej12ProgramaticoActivity"></activity>
+        <activity android:name=".Ej11DefinicionRecursosActivity" />
+        <activity android:name=".Ej05LinearLayout4Activity" />
+        <activity android:name=".Ej10PaddingMarginActivity" />
+        <activity android:name=".Ej09BasicosActivity" />
+        <activity android:name=".Ej08RelativeLayout2Activity" />
+        <activity android:name=".Ej07RelativeLayoutActivity" />
+        <activity android:name=".Ej06TableLayoutActivity" />
+        <activity android:name=".Ej04LinearLayout3Activity" />
+        <activity android:name=".Ej01FrameLayoutActivity" />
+        <activity android:name=".Ej03LinearLayout2Activity" />
+        <activity android:name=".Ej02LinearLayoutActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

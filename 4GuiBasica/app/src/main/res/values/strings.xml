@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">2-GuiBasica</string>
+    <string name="hello_world">¡Hola!</string>
+    <string name="frame">Estamos probando el layout FrameLayout</string>
+    <string name="to">destinatario</string>
+    <string name="subject">Asunto</string>
+    <string name="message">Mensaje</string>
+    <string name="send">Enviar</string>
+</resources>
