@@ -25,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Primer botón (cambia de activity sin pasar datos)
         button = findViewById(R.id.button1);
-        button.setOnClickListener(new View.OnClickListener() {  // Asignamos un escuchador para cuando se hace click en el botón con id "button1"
+        // Asignamos un escuchador para cuando se hace click en el botón con id "button1"
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Creamos un intent, su contexto es el objeto de tipo MainActivity que encierra este escuchador
@@ -37,13 +39,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Método asociado al 2º Botón:
     public void toSecondActivityWithText(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);  //TODO: when to cast?
-        String message = editText.getText().toString();
 
-        intent.putExtra("numero", 42);
-        intent.putExtra(EXTRA_MESSAGE, message); // Enviando datos usando una constante como identificador
+        EditText editText = (EditText) findViewById(R.id.editText); // Buscamos el EditText
+        String message = editText.getText().toString(); // Leemos el string que esté escrito dentro
+
+        intent.putExtra("numero", 42); // Añadimos un valor de tipo int
+        intent.putExtra(EXTRA_MESSAGE, message); // Añadimos un String usando una constante como clave
+
         startActivity(intent);
     }
 }

@@ -19,9 +19,15 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         Bundle datosDelIntent = getIntent().getExtras();
+
+        /* Comprobación de que el Intent contenga algún extra; es decir, que el Bundle que
+        devuelve "getExtras()" no sea null. Ya que cuando cambiamos de actividad con el botón
+        que no pasa extras, eso generaría una nullPointerExcepcion al intentar leer de ese Bundle */
         if (datosDelIntent != null) {
-            int numero = datosDelIntent.getInt("numero");
+
+            int numero = datosDelIntent.getInt("numero"); // Leemos el int pasado
             String mensaje = datosDelIntent.getString(MainActivity.EXTRA_MESSAGE);
+
             Toast.makeText(this, "Datos recibidos:\nMensaje:" + mensaje + "\nNúnmero:" + numero,
                     Toast.LENGTH_LONG).show();
 
