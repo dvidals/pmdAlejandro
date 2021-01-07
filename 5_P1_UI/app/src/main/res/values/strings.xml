@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name" translatable="false">P1_UI</string>
+    <string name="si" translatable="false">Sí</string>
+    <string name="no" translatable="false">No</string>
+    <string name="a_veces" translatable="false">A veces</string>
+    <string name="pregunta_iexplorer" translatable="false">¿Utilizas IExplorer?</string>
+    <string name="sup_izq" translatable="false">Sup. Izq.</string>
+    <string name="sup_der" translatable="false">Sup. Dcho.</string>
+    <string name="central" translatable="false">Central</string>
+    <string name="inf_izq" translatable="false">Inf. Izq.</string>
+    <string name="inf_der" translatable="false">Inf. Dcho.</string>
+    <string name="comentario" translatable="false">Comentario</string>
+    <string name="contenido" translatable="false">HOLA. ESTO ES UN COMENTARIO LARGO, LARGO, LARGO, MUY LARGO, Y ESCRITO EN LETRA MAYÚSCULA.</string>
+    <string name="guardar" translatable="false">Guardar</string>
+    <string name="cancelar" translatable="false">Cancelar</string>
+    <string name="conectar">Connect</string>
+    <string name="olvido">Did you forget yout password?</string>
+    <string name="login">Log in</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="titulo" translatable="false">Título</string>
+    <string name="teclea_titulo" translatable="false">Teclea título</string>
+    <string name="teclea_autor" translatable="false">Teclea autor</string>
+    <string name="autor" translatable="false">Autor</string>
+    <string name="lectura" translatable="false">Lectura</string>
+    <string name="tecnico" translatable="false">Técnico</string>
+    <string name="tema" translatable="false">Tema:</string>
+    <string name="ingles" translatable="false">Inglés</string>
+    <string name="frances" translatable="false">Francés</string>
+    <string name="traducido_a" translatable="false">Traducido a:</string>
+    <string name="aceptar" translatable="false">Aceptar</string>
+    <string name="ejercicio1" translatable="false">Ejercicio1</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/basic_padding" >
+
+    <TextView
+        android:id="@+id/tv_iexplorer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/pregunta_iexplorer" />
+
+    <Button
+        android:id="@+id/btnSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_iexplorer"
+        android:layout_alignStart="@+id/tv_iexplorer"
+        android:layout_marginTop="@dimen/separacion"
+        android:layout_marginEnd="@dimen/separacion"
+        android:text="@string/si" />
+
+    <Button
+        android:id="@+id/btnNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_iexplorer"
+        android:layout_alignTop="@id/btnSi"
+        android:layout_marginEnd="@dimen/separacion"
+        android:layout_toEndOf="@+id/btnSi"
+        android:text="@string/no"/>
+
+    <Button
+        android:id="@+id/bntQuizas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_iexplorer"
+        android:layout_toEndOf="@+id/btnNo"
+        android:layout_alignTop="@id/btnNo"
+        android:text="@string/a_veces"/>
+
+</RelativeLayout>

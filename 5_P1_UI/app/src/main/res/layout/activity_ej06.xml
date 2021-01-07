@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+    <!-- Importante usar stretchColumns con la columna central para poder pegar la tercera
+    a la derecha -->
+
+    <TableRow android:layout_weight="1">
+        <!-- Utilizamos pesos en TableRow para distribuir la pantalla en 3 filas del mismo tamaño -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sup_izq" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sup_der" />
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1"
+        android:gravity="center">
+        <!-- Además, cambiamos la gravity de las filas que lo requieren -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/central"
+            android:layout_span="3"/>
+        <!-- layout_span permite extender esta fila a lo largo de las 3 columnas que estamos
+        definiendo en las otras filas -->
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inf_izq" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inf_der" />
+    </TableRow>
+
+</TableLayout>

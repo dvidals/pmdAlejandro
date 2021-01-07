@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/separacion"
+    tools:context=".Ej09Activity">
+
+    <TextView
+        android:id="@+id/tv_comentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/separacion"
+
+        android:text="@string/comentario"
+        android:textColor="@color/titulos"
+        android:textSize="@dimen/size_titles"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/et_comentario"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:padding="@dimen/separacion"
+
+        android:hint="@string/contenido"
+        android:inputType="textMultiLine|textAutoCorrect|textCapCharacters"
+
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+
+        android:layout_marginVertical="@dimen/separacion"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_comentario"/>
+
+    <!-- La altura del EditText está a 0dp para ocupar el espacio que dejan las restricciones.
+    De ese modo podemos definir su tamaño con respecto al divisor (la "View" a continuación"), el
+    cual se ha posicionado en el centro de la pantalla. -->
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_divisor"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/boton_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar"
+        android:onClick="guardar"
+        android:layout_marginTop="@dimen/separacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <Button
+        android:id="@+id/boton_cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancelar"
+        android:onClick="cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/boton_guardar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

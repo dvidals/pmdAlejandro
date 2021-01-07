@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sup_izq" />
+
+        <!-- Un modo de hacerlo: el botón anterior no tiene peso, pero el FrameLayout sí, así
+         que ocupa el resto de la fila. Dentro de él podemos colocar el otro botón con la gravity
+         deseada para pegarlo al final -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sup_der"
+
+                android:layout_gravity="end"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/central" />
+
+    <!-- El botón central no tiene peso ya que no queremos que ocupe más espacio. Los LinearLayouts
+    de arriba y abajo, sí se extienden a toda la pantalla al asignarles peso a ambos -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inf_izq" />
+
+        <!-- Otro modo más sencillo: utilizando una vista "Space" para ocupar un espacio vacio,
+        al asignarle peso conseguimos que se expanda, mientras que los botones quedan en su tamaño
+        delimitado por "wrap_content". De este modo, el segundo botón se fuerza a la derecha
+        por ocupar el Space el maximo de espacio posible -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inf_der" />
+    </LinearLayout>
+
+
+</LinearLayout>

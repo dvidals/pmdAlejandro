@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="separacion">12dp</dimen>
+    <dimen name="basic_padding">30dp</dimen>
+    <dimen name="size_titles">25sp</dimen>
+    <dimen name="ej11_block_height">70dp</dimen>
+    <dimen name="ej11_block2_height">140dp</dimen>
+    <dimen name="separacion2">24dp</dimen>
+    <dimen name="size_divisor">5dp</dimen>
+    <dimen name="size_text_sw600dp">20sp</dimen>
+    <dimen name="size_titles_sw600dp">50sp</dimen>
+    <dimen name="padding_tablet">80dp</dimen>
+</resources>
