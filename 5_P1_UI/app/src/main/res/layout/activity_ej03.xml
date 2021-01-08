@@ -16,8 +16,8 @@
         android:id="@+id/btnSi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_iexplorer"
-        android:layout_alignStart="@+id/tv_iexplorer"
+        android:layout_below="@id/tv_iexplorer"
+        android:layout_alignStart="@id/tv_iexplorer"
         android:layout_marginTop="@dimen/separacion"
         android:layout_marginEnd="@dimen/separacion"
         android:text="@string/si" />
