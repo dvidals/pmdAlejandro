@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">6_Eventos&amp;IntentsRepaso</string>
+    <string name="botton11">button11: onClick con clase anónima</string>
+</resources>

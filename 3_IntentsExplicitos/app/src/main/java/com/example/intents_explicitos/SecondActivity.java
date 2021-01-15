@@ -18,6 +18,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        // Lectura de los datos incluidos en el intent desde el que se creó la actividad
         Bundle datosDelIntent = getIntent().getExtras();
 
         /* Comprobación de que el Intent contenga algún extra; es decir, que el Bundle que
@@ -25,13 +26,19 @@ public class SecondActivity extends AppCompatActivity {
         que no pasa extras, eso generaría una nullPointerExcepcion al intentar leer de ese Bundle */
         if (datosDelIntent != null) {
 
+
             int numero = datosDelIntent.getInt("numero"); // Leemos el int pasado
-            String mensaje = datosDelIntent.getString(MainActivity.EXTRA_MESSAGE);
+
+            // Leemos el String pasado
+            //String mensaje = datosDelIntent.getString(MainActivity.EXTRA_MESSAGE);
+            String mensaje = getIntent().getStringExtra(MainActivity.EXTRA_MESSAGE);
 
             Toast.makeText(this, "Datos recibidos:\nMensaje:" + mensaje + "\nNúnmero:" + numero,
                     Toast.LENGTH_LONG).show();
 
+            // Buscamos el textView (no se instancia porque ya está autogenerado desde el xml)
             TextView tv = findViewById(R.id.textView);
+            // seteamos el contenido del textView con el mensaje recibido desde el Intent
             tv.setText("Datos recibidos:\nMensaje:" + mensaje + "\nNúnmero:" + numero);
         }
     }

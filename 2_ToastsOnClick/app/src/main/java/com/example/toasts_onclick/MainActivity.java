@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) { // el método recibe como parámetro la View sobre la que se hizo el click (el botón)
                         Toast.makeText(MainActivity.this, R.string.o3_clase_anonima, Toast.LENGTH_SHORT).show();
                     }
-                });
+                }
+        );
 
     }
 
