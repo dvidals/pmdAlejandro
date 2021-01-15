@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/separacion"
+    android:paddingHorizontal="@dimen/separacion"
     tools:context=".Ej09Activity">
 
     <TextView
         android:id="@+id/tv_comentario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/separacion"
+        android:layout_marginTop="24dp"
 
         android:text="@string/comentario"
         android:textColor="@color/titulos"
@@ -32,16 +32,18 @@
         android:padding="@dimen/separacion"
 
         android:hint="@string/contenido"
-        android:inputType="textMultiLine|textAutoCorrect|textCapCharacters"
-
+        android:inputType="textMultiLine|textCapCharacters|textAutoCorrect"
         android:textAllCaps="true"
+
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
 
         android:layout_marginVertical="@dimen/separacion"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_comentario"
+        app:layout_constraintBottom_toTopOf="@id/divider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_comentario"/>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <!-- La altura del EditText está a 0dp para ocupar el espacio que dejan las restricciones.
     De ese modo podemos definir su tamaño con respecto al divisor (la "View" a continuación"), el
@@ -49,7 +51,7 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/size_divisor"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
