@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -19,17 +19,17 @@
          que ocupa el resto de la fila. Dentro de él podemos colocar el otro botón con la gravity
          deseada para pegarlo al final -->
         <FrameLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            >
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sup_der"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
 
-                android:layout_gravity="end"
-                />
+            android:text="@string/sup_der" />
         </FrameLayout>
 
     </LinearLayout>

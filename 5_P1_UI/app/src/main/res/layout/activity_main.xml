@@ -106,6 +106,7 @@
         android:onClick="toEj10"
         android:text="EJERCICIO10"
         app:layout_constraintEnd_toEndOf="@+id/ejercicio8"
+        app:layout_constraintStart_toStartOf="@+id/ejercicio8"
         app:layout_constraintTop_toTopOf="@+id/ejercicio9" />
 
     <Button

@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pregunta_iexplorer"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ej04_btn_si"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -22,8 +22,10 @@
         android:layout_marginTop="@dimen/separacion"
         android:onClick="onClickEj04"
         android:text="@string/si"
-        app:layout_constraintStart_toStartOf="@+id/tv_ej4_iexplorer"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ej4_iexplorer" />
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/ej04_btn_no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ej4_iexplorer" />
 
     <Button
         android:id="@+id/ej04_btn_no"
@@ -32,8 +34,10 @@
         android:layout_marginStart="@dimen/separacion"
         android:onClick="onClickEj04"
         android:text="@string/no"
+        app:layout_constraintEnd_toStartOf="@+id/ej04_btn_aveces"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ej04_btn_si"
-        app:layout_constraintTop_toTopOf="@+id/ej04_btn_si" />
+        app:layout_constraintTop_toTopOf="@id/ej04_btn_si" />
 
     <Button
         android:id="@+id/ej04_btn_aveces"
@@ -42,9 +46,8 @@
         android:layout_marginStart="@dimen/separacion"
         android:onClick="onClickEj04"
         android:text="@string/a_veces"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ej04_btn_no"
         app:layout_constraintTop_toTopOf="@+id/ej04_btn_si" />
-
-    <!-- Alternativa: centrar el bloque utilizando una cadena horizontal -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
