@@ -72,6 +72,7 @@
         android:text="@string/olvido"
         android:textColor="@color/titulos"
         android:textStyle="bold"
+        android:onClick="forgotPassword"
 
         android:layout_marginTop="@dimen/separacion"
         app:layout_constraintBottom_toBottomOf="parent"

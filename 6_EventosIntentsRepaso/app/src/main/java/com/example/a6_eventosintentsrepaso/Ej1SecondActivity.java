@@ -14,6 +14,13 @@ public class Ej1SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ej1_second);
 
-        ((TextView) findViewById(R.id.tv12)).setText(getIntent().getStringExtra(MENSAJE));
+        String mensaje = getIntent().getStringExtra(MENSAJE);
+
+        TextView tv= findViewById(R.id.tv12);
+
+        tv.setText(mensaje);
+
+        // En una línea:
+        // ((TextView) findViewById(R.id.tv12)).setText(getIntent().getStringExtra(MENSAJE));
     }
 }

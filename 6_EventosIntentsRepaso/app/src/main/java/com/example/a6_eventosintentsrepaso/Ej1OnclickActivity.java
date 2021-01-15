@@ -15,15 +15,15 @@ import android.widget.Toast;
 public class Ej1OnclickActivity extends AppCompatActivity {
 
 
-    static final String MENSAJE = "Mensaje Enviado";
+    static final String MENSAJE = "MensajeEnviado";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ej1_onclick);
 
-
-        findViewById(R.id.button11).setOnClickListener(
+        Button btn11 = findViewById(R.id.button11);
+        btn11.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -40,10 +40,18 @@ public class Ej1OnclickActivity extends AppCompatActivity {
                         // Añadimos al intent el texto que se haya insertado en el editText
                         intent.putExtra(MENSAJE, ((EditText) findViewById(R.id.et12)).getText().toString());
                         startActivity(intent);
+
                     }
                 }
         );
 
 
+    }
+
+    public void metodo(View view) {
+        Intent intent = new Intent(this, Ej1SecondActivity.class);
+        // Añadimos al intent el texto que se haya insertado en el editText
+        intent.putExtra(MENSAJE, ((EditText) findViewById(R.id.et12)).getText().toString());
+        startActivity(intent);
     }
 }

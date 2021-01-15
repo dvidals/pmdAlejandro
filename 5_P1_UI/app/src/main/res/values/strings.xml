@@ -30,4 +30,9 @@
     <string name="traducido_a" translatable="false">Traducido a:</string>
     <string name="aceptar" translatable="false">Aceptar</string>
     <string name="ejercicio1" translatable="false">Ejercicio1</string>
+    <string name="guardado" translatable="false">Guardado correctamente</string>
+    <string name="empty_user">Debe introducir un nombre de usuario</string>
+    <string name="empty_password">Debe introducir una contraseña</string>
+    <string name="invalid_password">Su contraseña debe tener más de 8 caracteres</string>
+    <string name="forgot_password">-- Acceso a recuperación de contraseña --</string>
 </resources>
