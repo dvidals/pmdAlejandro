@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ej07RadioGroupActivity">
+
+    <RadioGroup
+        android:id="@+id/myRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#abf234"
+        android:checkedButton="@+id/sound"
+        android:padding="20dp"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sonido" />
+
+        <RadioButton
+            android:id="@+id/vibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vibracion" />
+
+        <RadioButton
+            android:id="@+id/silent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silencio" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/chooseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myRadioGroup"
+        android:layout_marginTop="32dp"
+        android:text="Elegir"
+        app:layout_constraintEnd_toEndOf="@+id/myRadioGroup"
+        app:layout_constraintStart_toStartOf="@+id/myRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/myRadioGroup" />
+
+    <TextView
+        android:id="@+id/tv07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/chooseBtn"
+        app:layout_constraintStart_toStartOf="@+id/chooseBtn"
+        app:layout_constraintTop_toBottomOf="@+id/chooseBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
