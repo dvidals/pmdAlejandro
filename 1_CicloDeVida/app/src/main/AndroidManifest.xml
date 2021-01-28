@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- https://developer.android.com/guide/topics/manifest/manifest-intro -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ciclodevida">
 
@@ -12,7 +15,9 @@
 
         <activity android:name="com.example.ciclodevida.MainActivity">
             <intent-filter>
+                <!-- La siguiente acción indica qué activity será el punto de entrada de la aplicación (MAIN) -->
                 <action android:name="android.intent.action.MAIN" />
+                <!-- La categoría indica que esta activity estará presente en el LAUNCHER (entre las aplicaciones instaladas) -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
