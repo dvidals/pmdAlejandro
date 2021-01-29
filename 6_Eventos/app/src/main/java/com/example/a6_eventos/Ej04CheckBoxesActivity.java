@@ -20,8 +20,10 @@ public class Ej04CheckBoxesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ej04_check_boxes);
 
         // Buscamos el textView que va a modificarse y lo deamos asignado a una variable.
-        tvSandwich = findViewById(R.id.tvSandwich);
+        tvSandwich = findViewById(R.id.tvSandwich04);
     }
+
+
 
     public void onCheckboxClicked(View view) {
         // El evento salta al hacer click. Un click en el chechbox lo marca o lo desmarca.
@@ -31,19 +33,20 @@ public class Ej04CheckBoxesActivity extends AppCompatActivity {
 
         // Comprobamos cual de los checkboxes ha sido marcado
         switch (view.getId()) {
-            case R.id.cbJamon:
+            case R.id.cbJamon04:
                 if (checked) jamon = true;
                 else jamon = false;
                 break;
-            case R.id.cbQueso:
+            case R.id.cbQueso04:
                 if (checked) queso = true;
                 else queso = false;
                 break;
-            case R.id.cbLechuga:
+            case R.id.cbLechuga04:
                 if (checked) lechuga = true;
                 else lechuga = false;
                 break;
         }
+
 
         // Construimos el string
 

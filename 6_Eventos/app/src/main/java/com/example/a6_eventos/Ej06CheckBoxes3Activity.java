@@ -18,11 +18,11 @@ public class Ej06CheckBoxes3Activity extends AppCompatActivity implements Compou
         // Reutilizamos el Layout definido para la versión anterior
         setContentView(R.layout.activity_ej05_check_boxes2);
 
-        tvSandwich = findViewById(R.id.tvSandwich);
+        tvSandwich = findViewById(R.id.tvSandwich05);
 
-        CheckBox cbJamon = findViewById(R.id.cbJamon);
-        CheckBox cbQueso = findViewById(R.id.cbQueso);
-        CheckBox cbLechuga = findViewById(R.id.cbLechuga);
+        CheckBox cbJamon = findViewById(R.id.cbJamon05);
+        CheckBox cbQueso = findViewById(R.id.cbQueso05);
+        CheckBox cbLechuga = findViewById(R.id.cbLechuga05);
 
         /* No existe un receptor de eventos como el atributo onClick para OnCheckedChangeListener,
         así que hay que asignárselo desde el código. Si fuese un escuchador creado específicamente
@@ -40,15 +40,15 @@ public class Ej06CheckBoxes3Activity extends AppCompatActivity implements Compou
 
         // Comprobamos cual de los checkboxes ha sido marcado
         switch (buttonView.getId()) {
-            case R.id.cbJamon:
+            case R.id.cbJamon05:
                 if (isChecked) jamon = true;
                 else jamon = false;
                 break;
-            case R.id.cbQueso:
+            case R.id.cbQueso05:
                 if (isChecked) queso = true;
                 else queso = false;
                 break;
-            case R.id.cbLechuga:
+            case R.id.cbLechuga05:
                 if (isChecked) lechuga = true;
                 else lechuga = false;
                 break;

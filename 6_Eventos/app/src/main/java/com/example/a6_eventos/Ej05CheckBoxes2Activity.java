@@ -17,14 +17,15 @@ public class Ej05CheckBoxes2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ej05_check_boxes2);
 
-        tvSandwich = findViewById(R.id.tvSandwich);
+        tvSandwich = findViewById(R.id.tvSandwich05);
 
-        CheckBox cbJamon = findViewById(R.id.cbJamon);
-        CheckBox cbQueso = findViewById(R.id.cbQueso);
-        CheckBox cbLechuga = findViewById(R.id.cbLechuga);
+        CheckBox cbJamon = findViewById(R.id.cbJamon05);
+        CheckBox cbQueso = findViewById(R.id.cbQueso05);
+        CheckBox cbLechuga = findViewById(R.id.cbLechuga05);
 
         /* No existe un receptor de eventos como el atributo onClick para OnCheckedChangeListener,
         así que hay que asignárselo desde el código. Los asignamos mediante clases anónimas */
+
         cbJamon.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

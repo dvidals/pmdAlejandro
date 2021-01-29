@@ -9,31 +9,31 @@
     tools:context=".Ej04CheckBoxesActivity">
 
     <CheckBox
-        android:id="@+id/cbJamon"
+        android:id="@+id/cbJamon04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jamón"
         android:onClick="onCheckboxClicked"
         android:padding="10dp"
         android:background="@android:color/holo_red_light"
-        app:layout_constraintEnd_toStartOf="@+id/cbQueso"
+        app:layout_constraintEnd_toStartOf="@id/cbQueso04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/cbQueso"
+        android:id="@+id/cbQueso04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Queso"
         android:onClick="onCheckboxClicked"
         android:padding="10dp"
         android:background="@android:color/holo_blue_light"
-        app:layout_constraintEnd_toStartOf="@+id/cbLechuga"
-        app:layout_constraintStart_toEndOf="@+id/cbJamon"
-        app:layout_constraintTop_toTopOf="@+id/cbJamon" />
+        app:layout_constraintEnd_toStartOf="@id/cbLechuga04"
+        app:layout_constraintStart_toEndOf="@id/cbJamon04"
+        app:layout_constraintTop_toTopOf="@id/cbJamon04" />
 
     <CheckBox
-        android:id="@+id/cbLechuga"
+        android:id="@+id/cbLechuga04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lechuga"
@@ -41,16 +41,16 @@
         android:padding="10dp"
         android:background="@android:color/holo_green_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cbQueso"
-        app:layout_constraintTop_toTopOf="@+id/cbQueso" />
+        app:layout_constraintStart_toEndOf="@id/cbQueso04"
+        app:layout_constraintTop_toTopOf="@id/cbQueso04" />
 
     <TextView
-        android:id="@+id/tvSandwich"
+        android:id="@+id/tvSandwich04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbQueso" />
+        app:layout_constraintTop_toBottomOf="@id/cbQueso04" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

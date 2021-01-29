@@ -37,8 +37,12 @@ public class Ej01OnclickActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Ej01OnclickActivity.this, Ej01SecondActivity.class);
+
                         // Añadimos al intent el texto que se haya insertado en el editText
-                        intent.putExtra(MENSAJE, ((EditText) findViewById(R.id.et12)).getText().toString());
+                        EditText et12 = findViewById(R.id.et12);
+                        String contrasena = et12.getText().toString();
+                        intent.putExtra(MENSAJE, contrasena);
+
                         startActivity(intent);
 
                     }
@@ -48,10 +52,11 @@ public class Ej01OnclickActivity extends AppCompatActivity {
 
     }
 
-    public void metodo(View view) {
+/*    public void metodo(View view) {
         Intent intent = new Intent(this, Ej01SecondActivity.class);
         // Añadimos al intent el texto que se haya insertado en el editText
         intent.putExtra(MENSAJE, ((EditText) findViewById(R.id.et12)).getText().toString());
         startActivity(intent);
     }
+    */
 }
