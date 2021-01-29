@@ -2,6 +2,7 @@ package com.example.a6_eventos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +29,6 @@ public class Ej07RadioGroupActivity extends AppCompatActivity {
         silent = (RadioButton) findViewById(R.id.silent);
         tv07 = (TextView) findViewById(R.id.tv07);
         button = (Button) findViewById(R.id.chooseBtn);
-
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
