@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity que espera un resultado"
+        android:onClick="toResultRequestActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_marcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marcar teléfono"
+        android:onClick="marcarTelefono"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/btn_result"
+        app:layout_constraintStart_toStartOf="@id/btn_result"
+        app:layout_constraintTop_toBottomOf="@id/btn_result" />
+
+    <Button
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Enviar un SMS"
+        android:onClick="enviarSMS"
+        app:layout_constraintEnd_toEndOf="@id/btn_marcar"
+        app:layout_constraintStart_toStartOf="@id/btn_marcar"
+        app:layout_constraintTop_toBottomOf="@id/btn_marcar" />
+
+    <Button
+        android:id="@+id/btn_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Ir a github"
+        android:onClick="irAWeb"
+        app:layout_constraintEnd_toEndOf="@id/btn_text"
+        app:layout_constraintStart_toStartOf="@id/btn_text"
+        app:layout_constraintTop_toBottomOf="@id/btn_text" />
+
+    <Button
+        android:id="@+id/open_location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="openLocation"
+        android:text="Localización"
+        app:layout_constraintEnd_toEndOf="@id/btn_github"
+        app:layout_constraintStart_toStartOf="@id/btn_github"
+        app:layout_constraintTop_toBottomOf="@id/btn_github" />
+
+    <Button
+        android:id="@+id/alarma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="crearAlarma"
+        android:text="Alarma"
+        app:layout_constraintEnd_toEndOf="@id/open_location_button"
+        app:layout_constraintStart_toStartOf="@id/open_location_button"
+        app:layout_constraintTop_toBottomOf="@id/open_location_button" />
+
+    <Button
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="email"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="@id/alarma"
+        app:layout_constraintStart_toStartOf="@id/alarma"
+        app:layout_constraintTop_toBottomOf="@id/alarma" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

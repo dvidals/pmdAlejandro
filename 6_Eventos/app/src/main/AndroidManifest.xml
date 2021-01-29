@@ -4,26 +4,36 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.6_EventosIntentsRepaso">
         <activity android:name="com.example.a6_eventos.Ej07RadioGroupActivity"></activity>
         <activity android:name="com.example.a6_eventos.Ej05CheckBoxes2Activity" />
         <activity android:name="com.example.a6_eventos.Ej04CheckBoxesActivity" />
         <activity android:name="com.example.a6_eventos.Ej03RotationActivity" />
-        <activity android:name="com.example.a6_eventos.Ej02VisibilityActivity" />
         <activity android:name="com.example.a6_eventos.Ej06CheckBoxes3Activity" />
         <activity android:name="com.example.a6_eventos.Ej01SecondActivity" />
         <activity android:name="com.example.a6_eventos.Ej01OnclickActivity" />
-        <activity android:name="com.example.a6_eventos.MainActivity">
+
+        <activity android:name="com.example.a6_eventos.MainActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.a6_eventos.Ej02VisibilityActivity"
+            android:icon="@mipmap/ic_launcher_casa"
+            android:roundIcon="@mipmap/ic_launcher_casa">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
     </application>
 
 </manifest>
