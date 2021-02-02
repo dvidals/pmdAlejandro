@@ -15,7 +15,7 @@ import android.widget.Toast;
  * https://developer.android.com/guide/components/intents-filters
  * https://developer.android.com/guide/components/intents-common
  * <p>
- * TODO: Requiere cambios en la API 30:
+ * TODO: Cambios de la API 30:
  * https://stackoverflow.com/questions/62895098/android-api-30-getpackagemanager-resolveactivity-returns-null-with-action-view
  * https://developer.android.com/about/versions/11/privacy/package-visibility
  */
@@ -38,9 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void marcarTelefono(View v) {
-        Intent callIntent = new Intent(Intent.ACTION_DIAL);
-        callIntent.setData(Uri.parse("tel:886120464"));
-        startActivity(callIntent);
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:886120464"));
+
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, NO_APP_ERROR, Toast.LENGTH_SHORT).show();
+        }
     }
 
 

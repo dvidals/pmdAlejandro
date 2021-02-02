@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
 
+        <!-- Definimos otra actividad con lanzador, con un icono distinto -->
         <activity android:name="com.example.a6_eventos.Ej02VisibilityActivity"
             android:icon="@mipmap/ic_launcher_casa"
             android:roundIcon="@mipmap/ic_launcher_casa">
