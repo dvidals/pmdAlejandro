@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Intents</string>
-    <string name="email">email.fijo@dom.com</string>
+    <string name="no_app_error">No tengo app para este intent</string>
 </resources>

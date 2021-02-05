@@ -84,4 +84,15 @@
         app:layout_constraintStart_toStartOf="@id/alarma"
         app:layout_constraintTop_toBottomOf="@id/alarma" />
 
+    <Button
+        android:id="@+id/foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="foto"
+        android:text="Foto"
+        app:layout_constraintEnd_toEndOf="@id/email"
+        app:layout_constraintStart_toStartOf="@id/email"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,6 @@
     package="com.example.intents">
 
     <!-- Permisos requeridos para utilizar los intents implicitos -->
-
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <uses-feature
