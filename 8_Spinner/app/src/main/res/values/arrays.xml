@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Recurso con un array de strings para generar cualquier listado. -->
+    <string-array name="array_ejemplos">
+        <item>Ejemplo 1</item>
+        <item>Ejemplo 2</item>
+        <item>Ejemplo 3</item>
+        <item>Ejemplo 4</item>
+        <item>Ejemplo 5</item>
+        <item>Ejemplo 6</item>
+    </string-array>
+
+    <string-array name="planetas">
+        <item>Mercurio</item>
+        <item>Venus</item>
+        <item>Tierra</item>
+        <item>Marte</item>
+        <item>Júpiter</item>
+        <item>Saturno</item>
+        <item>Urano</item>
+        <item>Neptuno</item>
+    </string-array>
+
+    <string-array name="array_paises">
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+
+</resources>
