@@ -12,11 +12,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-https://developer.android.com/guide/topics/ui/controls/spinner
- */
-
-
 public class Spinner6Activity extends Activity {
 
     private Spinner spinner1, spinner2, spinner3;
@@ -27,16 +22,16 @@ public class Spinner6Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner6);
 
-        spinner1 = (Spinner) findViewById(R.id.spinner1);
+        spinner1 = (Spinner) findViewById(R.id.spinner61);
 
 		/* Se le asigna al primer spinner el escuchador para cuando se seleciona uno de sus elementos.
 		En este caso, se está definiendo el escuchador en otra clase */
         spinner1.setOnItemSelectedListener(new CustomOnItemSelectedListener());
 
-        spinner2 = (Spinner) findViewById(R.id.spinner2);
+        spinner2 = (Spinner) findViewById(R.id.spinner62);
         addItemsOnSpinner2();
 
-        spinner3 = (Spinner) findViewById(R.id.spinner3);
+        spinner3 = (Spinner) findViewById(R.id.spinner63);
         spinner3.setAdapter(ArrayAdapter.createFromResource(this, R.array.array_paises, android.R.layout.simple_spinner_dropdown_item));
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
@@ -44,7 +39,7 @@ public class Spinner6Activity extends Activity {
 
     }
 
-    public void addItemsOnSpinner2() { // Añadimos items dinámicamente al segundo spinner
+    private void addItemsOnSpinner2() { // Añadimos items dinámicamente al segundo spinner
         List<String> arrayList = new ArrayList<String>();
         arrayList.add("elemento 1");
         arrayList.add("elemento 2");
@@ -57,10 +52,15 @@ public class Spinner6Activity extends Activity {
                         arrayList
                 );
 
+        arrayAdapter.setDropDownViewResource(R.layout.item_guay);
+
         spinner2.setAdapter(arrayAdapter);
+
+        /* Seteamos programáticamente un título para el spinner, que se mostrará
+        ya que está definido en modo "dialog" */
+        spinner2.setPrompt(getResources().getString(R.string.item_prompt));
     }
-
-
+    
 
     public void addListenerOnButton() {
         btnSubmit.setOnClickListener(new OnClickListener() { // Escuchador del evento onClick del botón

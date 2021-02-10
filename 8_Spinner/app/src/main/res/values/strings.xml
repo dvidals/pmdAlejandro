@@ -4,5 +4,6 @@
     <string name="EjSpinner">EjSpinner</string>
     <string name="country_prompt">Choose a country</string>
     <string name="pulsa_ver_eleccion">Pulsa para ver tu elección</string>
+    <string name="item_prompt">Selecciona elemento:</string>
 
 </resources>

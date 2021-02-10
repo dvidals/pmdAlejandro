@@ -24,9 +24,9 @@ public class Spinner2Activity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ((TextView) findViewById(R.id.textViewElection))
-                        .setText("Elección: " + spinner.getSelectedItem());
+                        .setText("Elección: " + parent.getSelectedItem());
                 ((TextView) findViewById(R.id.textViewPosition))
-                        .setText("Posición: " + spinner.getSelectedItemId());
+                        .setText("Posición: " + parent.getSelectedItemId());
             }
 
             @Override

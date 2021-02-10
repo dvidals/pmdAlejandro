@@ -7,7 +7,7 @@
     tools:context="com.example.ej_spinner.Spinner1Activity">
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -22,7 +22,7 @@
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@id/spinner5" />
 
     <TextView
         android:id="@+id/textViewPosition"

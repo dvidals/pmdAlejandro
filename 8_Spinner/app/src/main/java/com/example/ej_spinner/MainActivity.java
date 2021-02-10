@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
+/*
+https://developer.android.com/guide/topics/ui/controls/spinner
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

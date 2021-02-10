@@ -16,19 +16,23 @@ public class Spinner3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner3);
+
         final Spinner spinner = findViewById(R.id.spinner);
+
+        String[] arrayPlanets = new String[] {"Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno"};
 
         // El ArrayAdapter es el adaptador que general el listado de elementos a partir del array
         ArrayAdapter arrayAdapter = new ArrayAdapter<>(this,
                 /* El segundo parámetro es el recurso con el diseño del elemento seleccionado */
-                android.R.layout.simple_spinner_item, // R.layout.chachi_spinner_item,
+                //android.R.layout.simple_list_item_1,
+                R.layout.item_guay,
                 /* El último parámetro pasa el listado de los elemento a adaptar, en este caso en un array de Strings */
-                new String[] {"Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno"} ) ;
+                arrayPlanets);
 
         // Asignación del recurso de cada elemento cuando se despliega la lista
         arrayAdapter.setDropDownViewResource(
-                // android.R.layout.simple_spinner_dropdown_item
-                R.layout.chachi_spinner_item
+                android.R.layout.simple_spinner_dropdown_item
+                //R.layout.chachi_spinner_item
         );
 
 
@@ -40,8 +44,8 @@ public class Spinner3Activity extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + spinner.getSelectedItem());
-                ((TextView) findViewById(R.id.textViewPosition)).setText("Posición: " + spinner.getSelectedItemId());
+                ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + parent.getSelectedItem());
+                ((TextView) findViewById(R.id.textViewPosition)).setText("Posición: " + parent.getSelectedItemId());
             }
 
             @Override

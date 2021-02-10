@@ -6,34 +6,44 @@
     android:layout_height="match_parent"
     android:paddingVertical="200dp">
 
+    <!-- Otro modo de funcionamiento del spinner es en modo "dialog", donde
+    además, se le puede añadir un título con prompt -->
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinner61"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:entries="@array/array_paises"
+
+        android:spinnerMode="dialog"
         android:prompt="@string/country_prompt"
+
+        android:entries="@array/array_paises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2" />
+        app:layout_constraintBottom_toTopOf="@id/spinner62" />
+
+    <!-- En el segundo spinner de nuevo lo pondremos en modo "dialog" pero
+    el prompt lo setearemos desde Java -->
+    <Spinner
+        android:id="@+id/spinner62"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+
+        android:spinnerMode="dialog"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner61"
+        app:layout_constraintBottom_toTopOf="@id/spinner63"/>
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinner63"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1"
-        app:layout_constraintBottom_toTopOf="@+id/spinner3"/>
-
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        app:layout_constraintBottom_toTopOf="@+id/btnSubmit" />
+        app:layout_constraintTop_toBottomOf="@id/spinner62"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit" />
 
     <Button
         android:id="@+id/btnSubmit"
@@ -43,6 +53,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner62" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

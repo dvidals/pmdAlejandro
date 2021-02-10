@@ -21,13 +21,13 @@ public class Spinner4Activity extends AppCompatActivity {
 
         // Creando el adaptador desde un recurso
         spinner.setAdapter(ArrayAdapter.createFromResource(this,
-                R.array.planetas, android.R.layout.simple_spinner_item));
+                R.array.planetas, android.R.layout.simple_spinner_dropdown_item));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + spinner.getSelectedItem());
-                ((TextView) findViewById(R.id.textViewPosition)).setText("Posición: " + spinner.getSelectedItemId());
+                ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + parent.getSelectedItem());
+                ((TextView) findViewById(R.id.textViewPosition)).setText("Posición: " + parent.getSelectedItemId());
             }
 
             @Override

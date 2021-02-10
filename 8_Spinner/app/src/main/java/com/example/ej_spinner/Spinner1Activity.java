@@ -19,7 +19,7 @@ public class Spinner1Activity extends AppCompatActivity {
         Spinner spinner = findViewById(R.id.spinner);
 
         ((TextView) findViewById(R.id.textViewElection))
-                .setText("Elección: " + spinner.getSelectedItem());
+                .setText("Elección: " + spinner.getSelectedItem().toString());
         ((TextView) findViewById(R.id.textViewPosition))
                 .setText("Posición: " + spinner.getSelectedItemId());
     }
