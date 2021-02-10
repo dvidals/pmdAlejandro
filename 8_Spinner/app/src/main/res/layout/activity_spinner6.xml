@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     android:paddingVertical="200dp">
 
-    <!-- En el primer Spinner, los elementos se introducen a través del
-    atributo "entries", que referencia a un recurso que previamente hemos creado
-    res/values/arrays.xml (aunque también podría añadirse a strings.xml) -->
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"

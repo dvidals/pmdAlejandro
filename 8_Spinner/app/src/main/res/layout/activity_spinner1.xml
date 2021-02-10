@@ -6,11 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.example.ej_spinner.Spinner1Activity">
 
+    <!-- Los elementos se introducen a través del atributo "entries",
+    que referencia a un recurso que previamente hemos creado
+    res/values/arrays.xml (aunque también podría añadirse a strings.xml) -->
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:entries="@array/planetas"
+
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,4 +47,5 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/textViewElection"
         app:layout_constraintTop_toBottomOf="@+id/textViewElection" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

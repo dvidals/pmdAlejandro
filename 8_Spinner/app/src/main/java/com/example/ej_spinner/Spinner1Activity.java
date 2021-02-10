@@ -15,10 +15,12 @@ public class Spinner1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_spinner1);
     }
 
-
     public void verEleccion(View view) {
         Spinner spinner = findViewById(R.id.spinner);
-        ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + spinner.getSelectedItem());
-        ((TextView) findViewById(R.id.textViewPosition)).setText("Posición: " + spinner.getSelectedItemId());
+
+        ((TextView) findViewById(R.id.textViewElection))
+                .setText("Elección: " + spinner.getSelectedItem());
+        ((TextView) findViewById(R.id.textViewPosition))
+                .setText("Posición: " + spinner.getSelectedItemId());
     }
 }

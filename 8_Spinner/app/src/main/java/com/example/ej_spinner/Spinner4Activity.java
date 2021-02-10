@@ -16,12 +16,14 @@ public class Spinner4Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner4);
+
         final Spinner spinner = findViewById(R.id.spinner);
 
-        spinner.setAdapter(ArrayAdapter.createFromResource(this, R.array.planetas, android.R.layout.simple_spinner_dropdown_item));
+        // Creando el adaptador desde un recurso
+        spinner.setAdapter(ArrayAdapter.createFromResource(this,
+                R.array.planetas, android.R.layout.simple_spinner_item));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + spinner.getSelectedItem());
@@ -30,7 +32,6 @@ public class Spinner4Activity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
     }

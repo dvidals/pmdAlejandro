@@ -18,11 +18,26 @@ public class Spinner3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_spinner3);
         final Spinner spinner = findViewById(R.id.spinner);
 
-        spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,
-                new String[] {"Mercurio","Venus","Tierra","Marte","Júpiter","Saturno","Urano","Neptuno"}));
+        // El ArrayAdapter es el adaptador que general el listado de elementos a partir del array
+        ArrayAdapter arrayAdapter = new ArrayAdapter<>(this,
+                /* El segundo parámetro es el recurso con el diseño del elemento seleccionado */
+                android.R.layout.simple_spinner_item, // R.layout.chachi_spinner_item,
+                /* El último parámetro pasa el listado de los elemento a adaptar, en este caso en un array de Strings */
+                new String[] {"Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno"} ) ;
+
+        // Asignación del recurso de cada elemento cuando se despliega la lista
+        arrayAdapter.setDropDownViewResource(
+                // android.R.layout.simple_spinner_dropdown_item
+                R.layout.chachi_spinner_item
+        );
+
+
+        // Utilizando un adaptador podemos cargar los elementos dinámicamente en el spinner
+        spinner.setAdapter(arrayAdapter);
+
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @SuppressLint("SetTextI18n")
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + spinner.getSelectedItem());
@@ -31,7 +46,6 @@ public class Spinner3Activity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
     }

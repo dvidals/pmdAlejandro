@@ -53,17 +53,10 @@ public class Spinner6Activity extends Activity {
         // El ArrayAdapter es el intermediario entre el arraylist y el AdapterView (el spinner)
         ArrayAdapter<String> arrayAdapter =
                 new ArrayAdapter<String>(this,
-                        // El segundo parámetro es el recurso con el diseño del elemento seleccionado
-                        // android.R.layout.simple_spinner_item,
-                        // R.layout.chachi_spinner_item,
                         android.R.layout.simple_list_item_1,
                         arrayList
                 );
-        // Asignación del recurso de cada elemento cuando se despliega la lista
-        arrayAdapter.setDropDownViewResource(
-               // android.R.layout.simple_spinner_dropdown_item
-                R.layout.chachi_spinner_item
-        );
+
         spinner2.setAdapter(arrayAdapter);
     }
 

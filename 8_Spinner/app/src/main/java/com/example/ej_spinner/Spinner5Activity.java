@@ -20,20 +20,22 @@ public class Spinner5Activity extends AppCompatActivity {
         setContentView(R.layout.activity_spinner5);
         final Spinner spinner = findViewById(R.id.spinner);
 
-        ArrayList<String> planetos = new ArrayList<>();
-        planetos.add("Mercurio");
-        planetos.add("Venus");
-        planetos.add("Tierra");
-        planetos.add("Marte");
-        planetos.add("Júpiter");
-        planetos.add("Saturno");
-        planetos.add("Urano");
-        planetos.add("Neptuno");
+        ArrayList<String> planetas = new ArrayList<>();
+        planetas.add("Mercurio");
+        planetas.add("Venus");
+        planetas.add("Tierra");
+        planetas.add("Marte");
+        planetas.add("Júpiter");
+        planetas.add("Saturno");
+        planetas.add("Urano");
+        planetas.add("Neptuno");
 
-        spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, planetos));
+        spinner.setAdapter(new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item,
+                planetas));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @SuppressLint("SetTextI18n")
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + spinner.getSelectedItem());

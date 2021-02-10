@@ -17,16 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
+    /**
+     * Método asociado al evento onClick del botón
+     */
     public void toEjemplo(View view) {
-        /*Spinner mainSpinner = findViewById(R.id.main_spinner);
-
-        Log.i("XX", String.valueOf(mainSpinner.getSelectedItemPosition()));
-        Toast.makeText(this,
-                String.valueOf(mainSpinner.getSelectedItemPosition()),
-                Toast.LENGTH_SHORT).show();*/
 
         switch (
+            /* Se comprueba la posición que está seleccionada en el spinner */
             ((Spinner) findViewById(R.id.main_spinner)).getSelectedItemPosition()
         ) {
             case 0: startActivity(new Intent(this, Spinner1Activity.class)); break;
