@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Spinner5Activity extends AppCompatActivity {
+    List<String> planetas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class Spinner5Activity extends AppCompatActivity {
         planetas.add("Urano");
         planetas.add("Neptuno");
 
+
         spinner.setAdapter(new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item,
                 planetas));
@@ -39,8 +41,10 @@ public class Spinner5Activity extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ((TextView) findViewById(R.id.textViewElection)).setText("Elección: " + parent.getSelectedItem());
-                ((TextView) findViewById(R.id.textViewPosition)).setText("Posición: " + parent.getSelectedItemId());
+                ((TextView) findViewById(R.id.textViewElection))
+                        .setText("Elección: " + parent.getSelectedItem());
+                ((TextView) findViewById(R.id.textViewPosition))
+                        .setText("Posición: " + parent.getSelectedItemId());
             }
 
             @Override
