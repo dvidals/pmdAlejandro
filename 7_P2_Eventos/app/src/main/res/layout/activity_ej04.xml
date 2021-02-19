@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/basic_padding"
+    tools:context=".Ej04Activity">
+
+    <TextView
+        android:id="@+id/textView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teclea tu nombre:"
+        android:layout_marginEnd="@dimen/separacion"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="@+id/etNombre04"
+        app:layout_constraintEnd_toStartOf="@+id/etNombre04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etNombre04" />
+
+    <EditText
+        android:id="@+id/etNombre04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView04"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgSrSra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/separacion"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/textView04"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre04">
+
+        <RadioButton
+            android:id="@+id/rbSra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/separacion"
+            android:text="@string/sra" />
+
+        <RadioButton
+            android:id="@+id/rbSr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sr" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/hola"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgSrSra" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

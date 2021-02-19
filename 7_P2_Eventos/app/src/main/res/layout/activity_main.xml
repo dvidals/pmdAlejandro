@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/basic_padding"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/ejercicio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj01"
+        android:text="EJERCICIO1"
+        app:layout_constraintBottom_toTopOf="@+id/ejercicio3"
+        app:layout_constraintEnd_toStartOf="@+id/ejercicio2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ejercicio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj02"
+        android:text="EJERCICIO2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ejercicio1"
+        app:layout_constraintTop_toTopOf="@+id/ejercicio1" />
+
+    <Button
+        android:id="@+id/ejercicio3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj03"
+        android:text="EJERCICIO3"
+        app:layout_constraintBottom_toTopOf="@+id/ejercicio5"
+        app:layout_constraintStart_toStartOf="@+id/ejercicio1"
+        app:layout_constraintTop_toBottomOf="@+id/ejercicio1" />
+
+    <Button
+        android:id="@+id/ejercicio4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj04"
+        android:text="EJERCICIO4"
+        app:layout_constraintEnd_toEndOf="@+id/ejercicio2"
+        app:layout_constraintTop_toTopOf="@+id/ejercicio3" />
+
+    <Button
+        android:id="@+id/ejercicio5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj05"
+        android:text="EJERCICIO5"
+        app:layout_constraintBottom_toTopOf="@+id/ejercicio7"
+        app:layout_constraintStart_toStartOf="@+id/ejercicio3"
+        app:layout_constraintTop_toBottomOf="@+id/ejercicio3" />
+
+    <Button
+        android:id="@+id/ejercicio6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj06"
+        android:text="EJERCICIO6"
+        app:layout_constraintEnd_toEndOf="@+id/ejercicio4"
+        app:layout_constraintTop_toTopOf="@+id/ejercicio5" />
+
+    <Button
+        android:id="@+id/ejercicio7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj07"
+        android:text="EJERCICIO7"
+        app:layout_constraintBottom_toTopOf="@+id/ejercicio9"
+        app:layout_constraintStart_toStartOf="@+id/ejercicio5"
+        app:layout_constraintTop_toBottomOf="@+id/ejercicio5" />
+
+    <Button
+        android:id="@+id/ejercicio8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj08"
+        android:text="EJERCICIO8"
+        app:layout_constraintEnd_toEndOf="@+id/ejercicio6"
+        app:layout_constraintTop_toTopOf="@+id/ejercicio7" />
+
+    <Button
+        android:id="@+id/ejercicio9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj09"
+        android:text="EJERCICIO9"
+        app:layout_constraintBottom_toTopOf="@+id/ejercicio11"
+        app:layout_constraintStart_toStartOf="@+id/ejercicio7"
+        app:layout_constraintTop_toBottomOf="@+id/ejercicio7" />
+
+    <Button
+        android:id="@+id/ejercicio10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj10"
+        android:text="EJERCICIO10"
+        app:layout_constraintEnd_toEndOf="@+id/ejercicio8"
+        app:layout_constraintTop_toTopOf="@+id/ejercicio9" />
+
+    <Button
+        android:id="@+id/ejercicio11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toEj11"
+        android:text="EJERCICIO11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ejercicio10"
+        app:layout_constraintStart_toStartOf="@+id/ejercicio9"
+        app:layout_constraintTop_toBottomOf="@+id/ejercicio9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

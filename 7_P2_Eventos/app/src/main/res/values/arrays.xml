@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_intents" >
+        <item>Selecciona una acción:</item>
+        <item>Llamar</item>
+        <item>SMS</item>
+        <item>Web</item>
+        <item>Localización</item>
+        <item>Alarma</item>
+        <item>Email</item>
+        <item>Cámara</item>
+    </string-array>
+</resources>

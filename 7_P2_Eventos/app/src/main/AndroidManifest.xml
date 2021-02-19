@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a7_p2_eventos">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.7_P2_Eventos">
+        <activity android:name="com.example.adaptadores2.Ej05IntentsImplicitos"></activity>
+        <activity android:name=".Ej042ResultSecondActivity" />
+        <activity android:name=".Ej042ResultActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ej04SecondActivity" />
+        <activity android:name=".Ej04Activity" />
+        <activity
+            android:name=".Ej03Activity"
+            android:icon="@mipmap/ic_launcher3"
+            android:roundIcon="@mipmap/ic_launcher3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ej02Activity" />
+        <activity android:name=".Ej01Activity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo03"
+    android:paddingVertical="100dp"
+    tools:context=".Ej03Activity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONVERSOR"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgConversion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgConversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/etValor03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/rbDolEur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/separacion"
+            android:text="Dólares a Euros" />
+
+        <RadioButton
+            android:id="@+id/rbEurDol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Euros a Dólares" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduce valor:"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginEnd="@dimen/separacion"
+        app:layout_constraintBottom_toBottomOf="@+id/etValor03"
+        app:layout_constraintEnd_toStartOf="@+id/etValor03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etValor03" />
+
+    <EditText
+        android:id="@+id/etValor03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/button03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/rgConversion" />
+
+    <Button
+        android:id="@+id/button03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambiar"
+        android:onClick="click03"
+        app:layout_constraintBottom_toTopOf="@+id/tvConversion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValor03" />
+
+    <TextView
+        android:id="@+id/tvConversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button03"
+        app:layout_constraintStart_toStartOf="@+id/button03"
+        app:layout_constraintTop_toBottomOf="@+id/button03" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

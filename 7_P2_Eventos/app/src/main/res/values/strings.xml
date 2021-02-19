@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">7_P2_Eventos</string>
+    <string name="hasta_luego">Hasta Luego</string>
+    <string name="adios">Adiós</string>
+    <string name="boton_hola">Hola</string>
+    <string name="hola">Hola, </string>
+    <string name="sr">Sr.</string>
+    <string name="sra">Sra.</string>
+    <string name="no_app_error">App no encontrada para ese Intent</string>
+    <string name="error_nombre">ERROR: Debe introducir un nombre.</string>
+</resources>
